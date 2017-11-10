@@ -1,0 +1,204 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building MavenCucumberPrototype 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ MavenCucumberPrototype ---
+[INFO] Deleting D:\Sadik\POC\Functional\EclipseWorkSpace-4.5\JavaCucumber\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ MavenCucumberPrototype ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\Sadik\POC\Functional\EclipseWorkSpace-4.5\JavaCucumber\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ MavenCucumberPrototype ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ MavenCucumberPrototype ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ MavenCucumberPrototype ---
+[INFO] Compiling 8 source files to D:\Sadik\POC\Functional\EclipseWorkSpace-4.5\JavaCucumber\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ MavenCucumberPrototype ---
+[INFO] Surefire report directory: D:\Sadik\POC\Functional\EclipseWorkSpace-4.5\JavaCucumber\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.demo.test.RunnerTest
+@completed
+Feature: Demo test scenario
+Executed navigation
+
+  Background: I am on a Home Page [90m# Seach.feature:4[0m
+    [32mGiven [0m[32mI am on the home page[0m   [90m# Steps.NavigateToHomePage()[0m
+
+  Scenario: test scenario of chappter1 [90m# Seach.feature:7[0m
+    [32mWhen [0m[32mI am on chapter first page[0m    [90m# Steps.clickOnChapter1()[0m
+    [32mAnd [0m[32mI select  radio button[0m         [90m# Steps.selectRadioButton()[0m
+    [32mAnd [0m[32mI select drop down value[0m       [90m# Steps.selectDropDown()[0m
+    [31mThen [0m[31mI verify page text[0m            [90m# Steps.verifyPageText()[0m
+      [31morg.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"divontheleft"}
+      Command duration or timeout: 30.02 seconds
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+      System info: host: 'Admin-PC', ip: '192.168.13.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_65'
+      Driver info: org.openqa.selenium.firefox.FirefoxDriver
+      Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+      Session ID: ceae6799-eed4-4fb7-bbec-70d5a866f7ee
+      *** Element info: {Using=xpath, value=divontheleft}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+      	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+      	at com.demo.pageobject.ChapterPage1.verifyText(ChapterPage1.java:21)
+      	at com.demo.test.Steps.verifyPageText(Steps.java:61)
+      	at ?.Then I verify page text(Seach.feature:11)
+      Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"divontheleft"}
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+      System info: host: 'Admin-PC', ip: '192.168.13.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_65'
+      Driver info: driver.version: unknown
+      	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Admin/AppData/Local/Temp/anonymous3237919126164212214webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+      	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Admin/AppData/Local/Temp/anonymous3237919126164212214webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+      [0m
+    [36mAnd [0m[36mI verify ajax request[0m          [90m# Steps.verifyAjaxRequest()[0m
+
+[31mFailed scenarios:[0m
+[31mSeach.feature:7 [0m# Scenario: test scenario of chappter1
+
+1 Scenarios ([31m1 failed[0m)
+6 Steps ([31m1 failed[0m, [36m1 skipped[0m, [32m4 passed[0m)
+0m37.550s
+
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"divontheleft"}
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'Admin-PC', ip: '192.168.13.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ceae6799-eed4-4fb7-bbec-70d5a866f7ee
+*** Element info: {Using=xpath, value=divontheleft}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.demo.pageobject.ChapterPage1.verifyText(ChapterPage1.java:21)
+	at com.demo.test.Steps.verifyPageText(Steps.java:61)
+	at ?.Then I verify page text(Seach.feature:11)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"divontheleft"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'Admin-PC', ip: '192.168.13.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Admin/AppData/Local/Temp/anonymous3237919126164212214webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Admin/AppData/Local/Temp/anonymous3237919126164212214webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+
+Tests run: 7, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 38.102 sec <<< FAILURE!
+Then I verify page text(Scenario: test scenario of chappter1)  Time elapsed: 0.01 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"divontheleft"}
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'Admin-PC', ip: '192.168.13.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ceae6799-eed4-4fb7-bbec-70d5a866f7ee
+*** Element info: {Using=xpath, value=divontheleft}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.demo.pageobject.ChapterPage1.verifyText(ChapterPage1.java:21)
+	at com.demo.test.Steps.verifyPageText(Steps.java:61)
+	at ?.Then I verify page text(Seach.feature:11)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"divontheleft"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'Admin-PC', ip: '192.168.13.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Admin/AppData/Local/Temp/anonymous3237919126164212214webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Admin/AppData/Local/Temp/anonymous3237919126164212214webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+
+Scenario: test scenario of chappter1  Time elapsed: 0.013 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"divontheleft"}
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'Admin-PC', ip: '192.168.13.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: ceae6799-eed4-4fb7-bbec-70d5a866f7ee
+*** Element info: {Using=xpath, value=divontheleft}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.demo.pageobject.ChapterPage1.verifyText(ChapterPage1.java:21)
+	at com.demo.test.Steps.verifyPageText(Steps.java:61)
+	at ?.Then I verify page text(Seach.feature:11)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"divontheleft"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'Admin-PC', ip: '192.168.13.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Admin/AppData/Local/Temp/anonymous3237919126164212214webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Admin/AppData/Local/Temp/anonymous3237919126164212214webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+
+
+Results :
+
+Tests in error: 
+  Then I verify page text(Scenario: test scenario of chappter1): Unable to locate element: {"method":"xpath","selector":"divontheleft"}(..)
+  Scenario: test scenario of chappter1: Unable to locate element: {"method":"xpath","selector":"divontheleft"}(..)
+
+Tests run: 7, Failures: 0, Errors: 2, Skipped: 1
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 40.370s
+[INFO] Finished at: Sun Mar 13 00:52:29 IST 2016
+[INFO] Final Memory: 15M/36M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project MavenCucumberPrototype: There are test failures.
+[ERROR] 
+[ERROR] Please refer to D:\Sadik\POC\Functional\EclipseWorkSpace-4.5\JavaCucumber\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
